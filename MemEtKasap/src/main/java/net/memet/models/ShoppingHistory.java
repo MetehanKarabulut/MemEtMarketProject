@@ -8,7 +8,16 @@ public class ShoppingHistory {
 	private List<Product> list;
 	private int UId;
 	private Time time;
+	private String address;
 	
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	ShoppingHistory(){
 		this.list = null;
 		this.ShId = 0;

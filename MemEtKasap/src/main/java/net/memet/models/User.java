@@ -9,14 +9,34 @@ public class User {
 	private String name;
 	private String mail;
 	private String password;
-	private Enum<Role> role;
+	private String role;
+	private String address;
 	
-	public User() {
-		this.name = null;
-		this.mail = null;
-		this.Id = 0;
-		this.role = null;
-		this.password = null;
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public User(String name, String mail, String password, String role, String address) {
+		super();
+		this.name = name;
+		this.mail = mail;
+		this.password = password;
+		this.role = role;
+		this.address = address;
+	}
+
+	public User(int id, String name, String mail, String password, String role, String address) {
+		super();
+		Id = id;
+		this.name = name;
+		this.mail = mail;
+		this.password = password;
+		this.role = role;
+		this.address = address;
 	}
 
 	public int getId() {
@@ -43,11 +63,11 @@ public class User {
 		this.password = password;
 	}
 
-	public Enum<Role> getRole() {
+	public String getRole() {
 		return role;
 	}
 
-	public void setRole(Enum<Role> role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 
