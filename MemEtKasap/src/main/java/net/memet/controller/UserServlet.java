@@ -37,7 +37,7 @@ public class UserServlet extends HttpServlet {
 
 		try {
 			switch (action) {
-			case "/insert":
+			case "/signup":
 				signUp(request, response);
 				break;
 			case "/delete":
@@ -74,6 +74,7 @@ public class UserServlet extends HttpServlet {
 		userDAO.InsertUser(user);
 		response.sendRedirect("mainpageforuser.jsp");
 	}
+	
 	public void updateUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		String name = request.getParameter("name");

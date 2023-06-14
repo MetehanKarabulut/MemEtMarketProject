@@ -9,6 +9,17 @@ public class Category {
 		this.Cname = null;
 	}
 	
+	public Category(String cname) {
+		super();
+		Cname = cname;
+	}
+
+	public Category(int cId, String cname) {
+		super();
+		CId = cId;
+		Cname = cname;
+	}
+
 	public int getCId() {
 		return CId;
 	}

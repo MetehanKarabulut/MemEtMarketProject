@@ -14,6 +14,21 @@ public class Product {
 		this.stock = 0;
 		this.price = 0;
 	}
+	public Product(int cId, String pname, float stock, float price) {
+		super();
+		CId = cId;
+		Pname = pname;
+		this.stock = stock;
+		this.price = price;
+	}
+	public Product(int pId, int cId, String pname, float stock, float price) {
+		super();
+		PId = pId;
+		CId = cId;
+		Pname = pname;
+		this.stock = stock;
+		this.price = price;
+	}
 	public int getPId() {
 		return PId;
 	}
