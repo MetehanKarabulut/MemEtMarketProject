@@ -1,6 +1,7 @@
 package net.memet.DBConnection;
 
 import java.io.IOException;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,7 +37,7 @@ public class ProductDAO {
 	
 	public boolean DeleteProduct(int id) throws SQLException {
 		Connection conn = DBLayer.connect();
-		PreparedStatement pstm = conn.prepareStatement("Delete form products where Pid = ?");
+		PreparedStatement pstm = conn.prepareStatement("Delete from products where Pid = ?");
 		pstm.setInt(1, id);
 		return pstm.executeUpdate() > 0;
 	}
@@ -45,7 +46,7 @@ public class ProductDAO {
 	public List<Product> SellectAllProducts() throws SQLException{
 		List<Product> products = null;
 		Connection conn = DBLayer.connect();
-		PreparedStatement pstm = conn.prepareStatement("Select * form products");
+		PreparedStatement pstm = conn.prepareStatement("Select * from products");
 		ResultSet rs = pstm.executeQuery();		
 		while (rs.next()) {
 			int Pid = rs.getInt("Pid");

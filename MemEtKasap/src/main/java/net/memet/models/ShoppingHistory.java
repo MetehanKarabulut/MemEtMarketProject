@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ShoppingHistory {
 	private int ShId;
-	private List<Product> list;
+	private List<String> list;
 	private int UId;
 	private Time time;
 	private String address;
@@ -18,11 +18,13 @@ public class ShoppingHistory {
 		this.address = address;
 	}
 
-	ShoppingHistory(){
+	public ShoppingHistory(int shid2, int uid2, List<String> list2, String address2, Time time2){
 		this.list = null;
 		this.ShId = 0;
+		this.list = null;
 		this.UId = 0;
 		this.time = null;
+		this.address = null;
 	}
 	
 	public int getShId() {
@@ -31,10 +33,10 @@ public class ShoppingHistory {
 	public void setShId(int shId) {
 		ShId = shId;
 	}
-	public List<Product> getList() {
+	public List<String> getList() {
 		return list;
 	}
-	public void setList(List<Product> list) {
+	public void setList(List<String> list) {
 		this.list = list;
 	}
 	public int getUId() {
@@ -46,7 +48,14 @@ public class ShoppingHistory {
 	public Time getTime() {
 		return time;
 	}
-	public void setTime(Time time) {
-		this.time = time;
+	public void setTime(String address) {
+		this.address = address;
+	} 
+	
+	public Time getAdress() {
+		return time;
+	}
+	public void setAdress(String address) {
+		this.address = address;
 	} 
 }

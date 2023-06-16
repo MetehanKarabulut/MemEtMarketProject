@@ -1,4 +1,7 @@
 package net.memet.models;
+
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
+
 enum Role{
 	admin,
 	user
