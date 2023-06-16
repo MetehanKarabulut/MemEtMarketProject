@@ -90,7 +90,6 @@ public class ShoppingHistoryServlet {
 			int id = Integer.parseInt(request.getParameter("Pid"));
 			historyDAO.DeleteShoppingHistory(id);
 			response.sendRedirect("adminpage.jsp");
-			
 		}
 	}
 }
