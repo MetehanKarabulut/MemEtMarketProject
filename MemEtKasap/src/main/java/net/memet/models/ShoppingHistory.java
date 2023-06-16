@@ -58,4 +58,5 @@ public class ShoppingHistory {
 	public void setAdress(String address) {
 		this.address = address;
 	} 
+	
 }

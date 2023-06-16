@@ -24,6 +24,7 @@ public class ShoppingHistoryDAO {
 		
 	}
 	
+	
 	public boolean UpdateShoppingHistory(ShoppingHistory history) throws SQLException {
 		Connection conn = DBLayer.connect();
 		PreparedStatement pstm = conn.prepareStatement("Update * from historys where Shid=?");
